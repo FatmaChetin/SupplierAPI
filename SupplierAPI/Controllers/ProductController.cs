@@ -83,7 +83,7 @@ namespace SupplierAPI.Controllers
 			}).ToList();
 		}
 
-		//Burada mevcut Stok takip
+		//Burada mevcut Stok takip edebiliriz..
 		public void Remainder(ProductResponseModel item, OrderDetailVM od)
 		{
 			Product p = _db.Products.FirstOrDefault(x => x.ID == item.ID);
