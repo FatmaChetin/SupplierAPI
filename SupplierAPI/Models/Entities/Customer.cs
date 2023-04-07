@@ -10,8 +10,8 @@ namespace SupplierAPI.Models.Entities
     {
         public string CompanyName { get; set; }
         public string ContactNumber { get; set; }
-        public string  ShippingAddress { get; set; }
-        public string ShippingCity { get; set;}
+ 
+      
 
         //relational properties
         public virtual List<Order> Orders { get; set; }
