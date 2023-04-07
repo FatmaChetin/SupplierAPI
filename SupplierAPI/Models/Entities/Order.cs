@@ -6,11 +6,9 @@ using System.Web;
 namespace SupplierAPI.Models.Entities
 {
 	public class Order : BaseEntity
-	{
-		public string ShippingAddress { get; set; }
-		public decimal TotalPrice { get; set; }
-		public DateTime? DeliveryDate { get; set; }
-		public bool Delivered { get; set; } // Teslim Edildi mi ?
+	{		
+		public string TotalPrice { get; set; }
+	
 
 
 

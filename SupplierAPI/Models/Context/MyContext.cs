@@ -4,7 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using SupplierAPI.Models.Entities;
-
+using SupplierAPI.Models.Init;
 
 namespace SupplierAPI.Models.Context
 {
@@ -12,7 +12,7 @@ namespace SupplierAPI.Models.Context
 	{
 		public MyContext() : base("MyConnection")
 		{
-
+			Database.SetInitializer(new MyInit());
 		}
 		protected override void OnModelCreating(DbModelBuilder modelBuilder)
 		{

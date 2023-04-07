@@ -6,9 +6,9 @@ using System.Web;
 
 namespace SupplierAPI.DesignPattern.SingletonPattern
 {
-    public class DBTools
+    public class DBTool
     {
-        DBTools()   { }
+        DBTool()   { }
         static MyContext _dbInstance;
         public static MyContext DbInstance 
         {
