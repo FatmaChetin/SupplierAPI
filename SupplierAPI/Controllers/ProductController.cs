@@ -1,7 +1,7 @@
 ﻿using SupplierAPI.DesignPattern.SingletonPattern;
 using SupplierAPI.Models.Context;
 using SupplierAPI.Models.Entities;
-using SupplierAPI.PureVM;
+
 using SupplierAPI.ResponseModel;
 using System;
 using System.Collections.Generic;
@@ -84,15 +84,15 @@ namespace SupplierAPI.Controllers
 		}
 
 		//Burada mevcut Stok takip edebiliriz..
-		public void Remainder(ProductResponseModel item, OrderDetailVM od)
+		public void Remainder(ProductResponseModel item, OrderDetail od)
 		{
 			Product p = _db.Products.FirstOrDefault(x => x.ID == item.ID);
-			if(p == null)
+			if (p == null)
 			{
 				throw new InvalidOperationException("Ürün Bulunamadı ");
 			}
 
-			if (p.Amount - od.Quantity <0)
+			if (p.Amount - od.Quantity < 0)
 			{
 				throw new InvalidOperationException("Stok Seviyesi Yetersiz");
 			}
